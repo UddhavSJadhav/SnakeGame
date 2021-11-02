@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgb(166, 255, 0) 0%,
+    rgb(98, 250, 192) 100%
+  );
+}
+
+.brand {
+  height: 20vh;
+  width: 100%;
+}
+
+h1 {
+  color: #fff;
+  padding-top: 50px;
+  text-align: center;
+}
+
+#main {
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+}
+
+@media (max-width: 400px) {
+  #main {
+    width: 100vw;
+    height: 100vw;
+  }
+}
+
+#main div {
+  color: transparent;
+  border: 1px solid #000;
+}
+
+.snake {
+  background-color: blue;
+}
+
+.apple {
+  background-color: red;
+}
+
+#menu {
+  width: 100vw;
+  position: absolute;
+  top: 25%;
+}
+
+#menu div {
+  border-radius: 20px;
+  width: 200px;
+  margin: auto;
+  background-color: rgb(183, 252, 252);
+  text-align: center;
+}
+
+button {
+  border-radius: 10px;
+  border-color: green;
+  background-color: rgb(97, 243, 97);
+  height: 50px;
+  width: 100px;
+  margin: 10px 0px;
+}
+
+.score {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.score span {
+  color: rgb(255, 166, 0);
+  text-shadow: black;
+}
+
+#game-over {
+  color: red;
+  font-size: 27px;
+  padding-bottom: 10px;
+}
