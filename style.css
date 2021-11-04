@@ -69,7 +69,7 @@ h1 {
   text-align: center;
 }
 
-button {
+.start {
   border-radius: 10px;
   border-color: green;
   background-color: rgb(97, 243, 97);
@@ -92,4 +92,31 @@ button {
   color: red;
   font-size: 27px;
   padding-bottom: 10px;
+}
+
+#controller {
+  display: none;
+  width: 100vw;
+  position: absolute;
+  top: 75%;
+}
+
+.controller-body {
+  border-radius: 20px;
+  width: 200px;
+  margin: auto;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  #controller {
+    display: block;
+  }
+}
+
+.controller-body button {
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 50px;
+  aspect-ratio: 1;
 }

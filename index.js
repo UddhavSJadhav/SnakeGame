@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const squares = document.querySelectorAll("#main div");
   const scoreBoard = document.querySelector("span");
   const startBtn = document.querySelector(".start");
+  const gamePad = document.querySelectorAll(".controller-body button");
 
   const width = 10;
   let currentIndex = 0; //first li in grid
@@ -84,6 +85,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function controllerMoves() {
+    if (this.id === "right") {
+      direction = 1; //right arrow key on keyboard
+    } else if (this.id === "up") {
+      direction = -width; //up arrow key on keyboard
+    } else if (this.id === "left") {
+      direction = -1; //left arrow key on keyboard
+    } else if (this.id === "down") {
+      direction = +width; //down arrow key on keyboard
+    }
+  }
+
   document.addEventListener("keyup", control);
   startBtn.addEventListener("click", startGame);
+  for (var i = 0; i < 4; i++) {
+    gamePad[i].addEventListener("click", controllerMoves);
+  }
 });
