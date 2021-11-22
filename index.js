@@ -87,19 +87,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function controllerMoves() {
     if (this.id === "right") {
-      direction = 1; //right arrow key on keyboard
+      direction = 1; //right arrow key on gamepad
     } else if (this.id === "up") {
-      direction = -width; //up arrow key on keyboard
+      direction = -width; //up arrow key on gamepad
     } else if (this.id === "left") {
-      direction = -1; //left arrow key on keyboard
+      direction = -1; //left arrow key on gamepad
     } else if (this.id === "down") {
-      direction = +width; //down arrow key on keyboard
+      direction = +width; //down arrow key on gamepad
     }
   }
 
   document.addEventListener("keyup", control);
   startBtn.addEventListener("click", startGame);
-  for (var i = 0; i < 4; i++) {
-    gamePad[i].addEventListener("click", controllerMoves);
-  }
+  gamePad.forEach((btn) => btn.addEventListener("click", controllerMoves));
 });
